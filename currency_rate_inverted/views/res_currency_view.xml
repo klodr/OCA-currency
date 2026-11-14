@@ -15,7 +15,9 @@
         <field name="model">res.currency</field>
         <field name="inherit_id" ref="base.view_currency_form" />
         <field name="arch" type="xml">
-            <field name="rate" position="after">
+            <!-- 18.0: the form has no top level "rate" field any more, only the one of
+                 the embedded rate list (res.currency.rate) -->
+            <field name="active" position="after">
                 <field name="rate_inverted" />
             </field>
         </field>
